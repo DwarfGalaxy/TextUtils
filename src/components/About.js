@@ -8,7 +8,7 @@ export default function About() {
     const [btn, setBtn] = useState("Enable Dark Mood");
 
     let changeBackground = () => {
-        if (style.backgroundColor == "white") {
+        if (style.backgroundColor === "white") {
             setstyle({
                 color: 'white',
                 backgroundColor: 'black',

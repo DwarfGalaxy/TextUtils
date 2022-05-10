@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter } from "react-router-dom";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Alert from './components/Alert';
 import About from './components/About';
@@ -24,7 +24,7 @@ function App() {
   }
 
   let changeBackgroundColor = () => {
-    if (background_Color == "light") {
+    if (background_Color === "light") {
       setbackground_Color("dark");
       setmodeText("Enable Light Mode");
       setText_Color("light");
