@@ -20,6 +20,7 @@ export default function Textform(props) {
     
     return (
         <>
+        <div className="container my-4">
             <h2>{props.heading}</h2>
             <div className="form">
                 <textarea className={`form-control bg-${props.textareaColor}`}  value={comments} onChange={handleOnChange} rows="8" id='textMessage'></textarea>
@@ -35,6 +36,7 @@ export default function Textform(props) {
                 <h2>Preview:</h2>
                 <p>{comments}</p>
 
+            </div>
             </div>
         </>
     )

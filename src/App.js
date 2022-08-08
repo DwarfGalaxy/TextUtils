@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter,Routes, Route  } from "react-router-dom";
 import './App.css';
 import Alert from './components/Alert';
 import About from './components/About';
@@ -62,19 +61,14 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    <div className="App">
-      
       <Navbar title="TextUtils" about="About" background_Color={background_Color} text_Color={text_Color} modeText={modeText} changeBackgroundColor={changeBackgroundColor} />
       <Alert alert={alert} />
       <Routes>
-        <Route path="/" element={
-          <div className="container my-4">
+        <Route exact path="/textutils" element={
           <Textform heading="TextUtils - Word Counter, Character Counter, Remove extra spaces" textareaColor={textareaColor} />
-        </div>
         } />
-        <Route path="about" element={<About />} />
+        <Route exact path="/about" element={<About />} />
       </Routes>
-      </div>
       </BrowserRouter>
     </>
 
